@@ -1,6 +1,7 @@
-import org.junit.Assert;
-import org.junit.Test;
- 
+//import org.junit.Assert;
+//import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 public class GameTest {
   String testString = "MiniTest";
@@ -8,6 +9,6 @@ public class GameTest {
   @Test
   public void testMake(){
     System.out.println("Running Test1");
-    Assert.assertEquals(testString, "MiniTest", "The test failed");
+    assertEquals(testString, "MiniTest", "The test failed");
   }
 }
