@@ -1,5 +1,6 @@
-import junit.Assert;
-import junit.Test;
+import org.junit.jupiter.api.Assert;
+import org.junit.jupiter.api.Test;
+ 
 
 public class GameTest {
   String testString = "MiniTest";
