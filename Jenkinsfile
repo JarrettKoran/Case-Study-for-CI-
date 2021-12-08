@@ -21,7 +21,7 @@ pipeline {
     stage("build"){
       steps{
         echo 'building the application'
-        sh "mvn clean install" 
+        sh "mvn -f /usr/bin/mvn/pom.xml clean install" 
       }
      
     }
