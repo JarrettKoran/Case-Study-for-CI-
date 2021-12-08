@@ -18,6 +18,7 @@ pipeline {
     stage("build"){
       steps{
         echo 'building the application'
+        sh "mvn -DgeneratePom=true"
         sh "mvn --version"
         sh "mvn compile"
       }
