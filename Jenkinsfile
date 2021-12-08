@@ -12,6 +12,7 @@ pipeline {
   
     stage("cloning"){
       steps{
+        echo 'cloning main branch'
         checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'gitToken', url: 'https://github.com/FDator/Case-Study-for-CI-.git']]])
       }
     }
@@ -20,6 +21,10 @@ pipeline {
         echo 'building the application'
         sh "mvn --version"
         sh "mvn compile"
+      }
+      stage("testing"){
+      steps{
+        echo 'running junit tests'
       }
      
     }
