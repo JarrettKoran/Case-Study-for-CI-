@@ -21,7 +21,7 @@ pipeline {
         
         echo 'setting up junit'
         sh 'cd lib/ ; wget https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.7.0/junit-platform-console-standalone-1.7.0-all.jar'
-        sh 'cd src ; javac -cp "../lib/junit-platform-console-standalone-1.7.0-all.jar" src/main/java/org/psnbtech/GameTest.java'
+        sh 'cd src/main/java/org/psnbtech/ ; javac -cp "../lib/junit-platform-console-standalone-1.7.0-all.jar" GameTest.java'
         
         echo 'building the application'
         sh "mvn --version"
