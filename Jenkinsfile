@@ -1,9 +1,6 @@
 pipeline { 
 
   agent any
-  environment{
-    PATH = "/usr/bin/mvn:$PATH"
-  }
   
   tools{
     maven "Maven3"
@@ -21,7 +18,7 @@ pipeline {
     stage("build"){
       steps{
         echo 'building the application'
-        sh "mvn -f /usr/bin/mvn/ clean install" 
+        sh "mvn --version" 
       }
      
     }
