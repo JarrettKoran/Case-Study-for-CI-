@@ -23,17 +23,16 @@ pipeline {
         sh "mvn clean compile"
       }
     }
-      stage("testing"){
+    stage("testing"){
       steps{
         echo 'setting up junit tests'
         sh 'cd /var/lib/jenkins/workspace/CaseStudyPipeline_main/target/classes : javac -cp junit-4.5.jar: GameTest.java'
       }
-      post { 
-        always { 
+    post { 
+      always { 
           echo 'Creating Test report'
           mvn surefire-report:report gameTestReport.html
      }
     }
     }
-}
 }
