@@ -26,7 +26,7 @@ pipeline {
       stage("testing"){
       steps{
         echo 'setting up junit tests'
-        sh 'cd /var/lib/jenkins/workspace/CaseStudyPipeline_main/target/classes ; javac -cp junit-4.5.jar; GameTest.java'
+        sh 'cd /var/lib/jenkins/workspace/CaseStudyPipeline_main/target/classes : javac -cp junit-4.5.jar: GameTest.java'
       }
     }
 }
