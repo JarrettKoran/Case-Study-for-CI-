@@ -12,7 +12,12 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M5</version>
           <configuration>
-                <workingDirectory>${project.build.directory}/target/classes</workingDirectory>
+                <resources>
+                  <resource>
+                    <directory>${project.basedir}/target/classes</directory>
+                    <filtering>false</filtering>
+                    <include>application.properties</include>
+                  </resource>
           </configuration>
         </plugin>
       </plugins>
