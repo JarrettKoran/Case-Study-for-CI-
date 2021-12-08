@@ -19,6 +19,20 @@
     </dependency>
 
 </dependencies>
+  <build>
+     <plugins>
+          <Plugin>
+            <groupId>org.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.20</version>
+            <configuration>
+            <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+            </suiteXmlFiles>
+            </configuration>
+           </plugin>
+     </plugins>
+</build>
   <groupId>AsteroidProject</groupId>
   <artifactId>AsteroidMaster</artifactId>
   <version>0.0.1-SNAPSHOT</version>
