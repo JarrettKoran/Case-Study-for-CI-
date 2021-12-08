@@ -11,7 +11,6 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M5</version>
-          <outputDirectory>src/test/resources</outputDirectory>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -46,5 +45,6 @@
   <groupId>AsteroidProject</groupId>
   <artifactId>AsteroidMaster</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <outputDirectory>src/test/resources</outputDirectory>
   <name>MainAsteroid</name>
 </project>
