@@ -20,12 +20,18 @@ pipeline {
       steps{
         echo 'building the application'
         sh "mvn --version"
-        sh "mvn compile"
+        sh "mvn clean compile"
       }
       stage("testing"){
       steps{
         echo 'running junit tests'
+        sh './mvnw test'
       }
+        post{
+          always{
+            junit 'TEST FILE'
+          }
+        }
      
     }
     
