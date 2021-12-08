@@ -8,6 +8,6 @@ public class GameTest {
   @Test
   public void testMake(){
     System.out.println("Running Test1");
-    Assertions.assertEquals(testString, "MiniTest", "The test failed");
+    Assert.assertEquals(testString, "MiniTest", "The test failed");
   }
 }
