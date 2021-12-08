@@ -37,15 +37,15 @@
   
   <dependencies>
     <dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<version>${junit.jupiter.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-			<version>${junit.jupiter.version}</version>
-		</dependency>
+	<groupId>org.junit.jupiter</groupId>
+	<artifactId>junit-jupiter-engine</artifactId>
+	<version>${junit.jupiter.version}</version>
+	</dependency>
+     <dependency>
+	<groupId>org.junit.jupiter</groupId>
+	<artifactId>junit-jupiter-api</artifactId>
+	<version>${junit.jupiter.version}</version>
+  </dependency>
     
     <dependency>
       <groupId>junit</groupId>
@@ -53,12 +53,7 @@
       <version>4.5</version>
       <scope>compile</scope>
     </dependency>
-    <!-- add the junit dependency here -->
-    <dependency>
-       <groupId>org.junit.jupiter</groupId>
-       <artifactId>junit-jupiter-api</artifactId>
-       <version>5.7.0</version>
-    </dependency>
+
 
   </dependencies>
 
