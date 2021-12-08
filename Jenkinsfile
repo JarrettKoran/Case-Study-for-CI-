@@ -16,7 +16,7 @@ pipeline {
         echo 'building the application'
         checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'gitToken', url: 'https://github.com/FDator/Case-Study-for-CI-.git']]])
         withMaven{
-          sh "Maven3 clean package" 
+          sh "mvn clean package" 
         }
       }
       
