@@ -17,7 +17,7 @@ pipeline {
     }
     stage("build"){
       steps{
-        sh 'mvn clean'
+        sh 'mvn verify'
         
         echo 'setting up junit'
         sh 'cd src/main/java/org/psnbtech/ ; javac -cp "../lib/junit-platform-console-standalone-1.7.0-all.jar" GameTest.java'
