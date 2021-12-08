@@ -31,7 +31,7 @@ pipeline {
     post { 
       always { 
           echo 'Creating Test report'
-          mvn surefire-report:report gameTestReport.html
+          sh "mvn surefire-report:report gameTestReport.html"
      }
     }
     }
