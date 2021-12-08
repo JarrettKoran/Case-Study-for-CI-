@@ -17,10 +17,6 @@ pipeline {
     }
     stage("build"){
       steps{
-        sh 'mvn verify'
-        
-        echo 'setting up junit'
-        sh 'cd src/main/java/org/psnbtech/ ; javac -cp "../lib/junit-platform-console-standalone-1.7.0-all.jar" GameTest.java'
         
         echo 'building the application'
         sh "mvn --version"
@@ -29,9 +25,8 @@ pipeline {
     }
       stage("testing"){
       steps{
-        echo 'running junit tests'
-          sh 'cd src/ ; java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class GameTest --reports-dir="reports"'
-          junit 'src/reports/*-jupiter.xml'
+        echo 'setting up junit tests'
+        sh 'cd src/main/java/org/psnbtech/ ; javac -cp junit-4.5.jar; GameTest.java'
       }
     }
 }
