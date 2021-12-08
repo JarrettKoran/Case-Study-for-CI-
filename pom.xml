@@ -16,6 +16,10 @@
     </pluginManagement>
   </build>
   
+  <configuration>
+    <linkXRef>false</linkXRef>
+  </configuration>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
