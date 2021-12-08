@@ -2,7 +2,7 @@ pipeline {
 
   agent any
   environment{
-    PATH = "/usr/share/man/man1:$PATH"
+    PATH = "/usr/bin/mvn:$PATH"
   }
   
   tools{
@@ -18,9 +18,7 @@ pipeline {
       steps{
         echo 'building the application'
         checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'gitToken', url: 'https://github.com/FDator/Case-Study-for-CI-.git']]])
-        withMaven{
-          sh "mvn clean install" 
-        }
+        sh "mvn clean install" 
       }
       
     }
