@@ -18,6 +18,7 @@
                     <filtering>false</filtering>
                     <include>application.properties</include>
                   </resource>
+                </resources>
           </configuration>
         </plugin>
       </plugins>
