@@ -30,7 +30,7 @@ pipeline {
       stage("testing"){
       steps{
         echo 'running junit tests'
-        sh 'cd src/ ; java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class CarTest --reports-dir="reports"'
+        sh 'cd src/ ; java -jar ../lib/junit-platform-console-standalone-1.7.0-all.jar -cp "." --select-class GameTest --reports-dir="reports"'
         junit 'src/reports/*-jupiter.xml'
       }
         post{
