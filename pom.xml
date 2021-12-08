@@ -4,6 +4,17 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
+  <dependencies>
+
+    <!-- add the junit dependency here -->
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.7.0</version>
+        <scope>test</scope>
+    </dependency>
+
+</dependencies>
   <groupId>AsteroidProject</groupId>
   <artifactId>AsteroidMaster</artifactId>
   <version>0.0.1-SNAPSHOT</version>
