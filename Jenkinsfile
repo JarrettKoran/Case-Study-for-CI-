@@ -32,6 +32,9 @@ pipeline {
       always { 
           echo 'Creating Test report'
           sh "mvn surefire-report:report"
+          
+          echo 'Sending Emails'
+          emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
      }
     }
     }
