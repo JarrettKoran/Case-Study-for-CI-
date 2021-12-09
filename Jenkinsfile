@@ -35,6 +35,7 @@ pipeline {
           
           echo 'Sending Emails'
           emailext (
+            attachLog: true,
             subject: 'Build Created',
             body: 'Sending Build Information',
             to: '$DEFAULT_RECIPIENTS',
