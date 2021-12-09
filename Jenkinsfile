@@ -34,9 +34,12 @@ pipeline {
           sh "mvn surefire-report:report"
           
           echo 'Sending Emails'
-          emailext attachLog:true, 
-                   body: 'Sending Build Information',  
-                   subject: 'Build Created'
+          emailext (
+            subject: 'Build Created',
+            body: 'Sending Build Information',
+            to: '$DEFAULT_RECIPIENTS',
+            recipientProviders: [ requestor() ]
+          )
      }
     }
     }
